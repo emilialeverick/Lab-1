@@ -8,10 +8,18 @@ import matplotlib.pyplot as plt
 
 #(1) Write a function that stores the first 1000 numbers of the Fibonacci sequence in a numpy array.
 #Then write two assertions as tests of your function.
-def fibonacci_of(n)
-        if n in {0, 1}:
-              return n
-        return fibonacci_of(n - 1) + fibonacci_of(n - 2)  # Recursive case
+def fibonacci_sequence(n):
+    sequence = np.empty(n)   #initiate a placeholder empty array
+    sequence[0] = 0 sequence[1] = 1
+    for i in range(2, n):
+        sequence[i] = sequence[i-1] + sequence[i-2]
+    return sequence
+
+#testing assertions
+def test_fibonacci_sequence():
+    sequence = fibonacci_sequence(1000)
+    assert sequence[1] == 1
+    assert sequence[-5] == sequence[994] + sequence[993]
 
 
 [fibonacci_of(n) for n in range(20)]

@@ -14,7 +14,7 @@ def fibonacci_of(n)
         return fibonacci_of(n - 1) + fibonacci_of(n - 2)  # Recursive case
 
 
->>> [fibonacci_of(n) for n in range(20)]
+[fibonacci_of(n) for n in range(20)]
 
 #(2) Plot the data that is imported below, labeling the X and Y axes.
 
